@@ -1,5 +1,4 @@
 from fastapi import FastAPI, File, UploadFile
-from sttModel import getSpeechToText
 import emotionanalyzer
 
 app = FastAPI()
@@ -14,4 +13,10 @@ async def upload_file(file: UploadFile = File(...)):
                 "Feel" : emotion    
             }
 
+@app.get("/")
+def root():
+    return {"messagge" : "Welcome to EmotionsAPI"}
 
+@app.post("/getText")
+def getText(text: str):
+    return {"El texto introducido fue:" : text}

@@ -1,7 +1,7 @@
 from google.cloud import speech
 
 #creacion del cliente
-client = speech.SpeechClient.from_service_account_file('key.json.env')
+client = speech.SpeechClient.from_service_account_file('key.env.json')
 
 #leyendo el archivo de audio
 def getSpeechToText(audio):
