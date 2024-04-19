@@ -1,10 +1,12 @@
 import sttModel 
 import emoanalisis
+import io
 
 
 def getAnalysis(audio):
     
-    text = sttModel.getSpeechToText(audio)
-    emotion = emoanalisis.predict_sentiment(text) 
+    text= sttModel.getSpeechToText(audio)
+    emotion, score = emoanalisis.predict_sentiment(text) 
 
-    return [text, emotion]
+    print(text)
+    return [text,  emotion, score]
