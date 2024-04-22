@@ -32,6 +32,3 @@ def predict_sentiment(text):
 
     return predicted_sentiment, higher_score
 
-
-
-print(predict_sentiment("I'm devastated by the news of her passing. She was such a bright light in our lives and will be deeply missed."))
